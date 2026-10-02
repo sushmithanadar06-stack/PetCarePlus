@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:clipToPadding="false"
+    android:overScrollMode="always"
+    android:scrollbars="vertical"
+    android:paddingBottom="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:paddingBottom="32dp">
+
+        <!-- TITLE -->
+
+        <TextView
+            android:id="@+id/txtEditPetTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Edit Pet Profile"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#152922"
+            android:gravity="center"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/txtEditPetSubtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Update your pet's information"
+            android:textSize="16sp"
+            android:textColor="#4B5C54"
+            android:gravity="center"
+            android:layout_marginBottom="24dp" />
+
+        <!-- PET PHOTO — circular, thick border, white background -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center"
+            app:cardCornerRadius="1000dp"
+            app:cardElevation="0dp"
+            app:strokeColor="#2F6B52"
+            app:strokeWidth="4dp"
+            app:cardBackgroundColor="#FFFFFF"
+            android:layout_marginBottom="12dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imgEditPetPhoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="Pet photo"
+                    android:scaleType="centerCrop"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/txtEditPetPhotoLetter"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="C"
+                    android:textSize="42sp"
+                    android:textStyle="bold"
+                    android:textColor="#2F6B52"/>
+
+            </FrameLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <Button
+            android:id="@+id/btnEditPetPhoto"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:text="Change Pet Photo"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#2F6B52"
+            android:layout_marginBottom="24dp" />
+
+        <!-- PET NAME -->
+
+        <EditText
+            android:id="@+id/etEditPetName"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="Pet Name"
+            android:inputType="textCapWords"
+            android:padding="12dp"
+            android:textSize="16sp" />
+
+        <!-- PET TYPE -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pet Type"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#152922"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="6dp" />
+
+        <Spinner
+            android:id="@+id/spEditPetType"
+            android:layout_width="match_parent"
+            android:layout_height="56dp" />
+
+        <!-- BREED -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Breed"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#152922"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="6dp" />
+
+        <Spinner
+            android:id="@+id/spEditPetBreed"
+            android:layout_width="match_parent"
+            android:layout_height="56dp" />
+
+        <EditText
+            android:id="@+id/etEditCustomBreed"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="Enter your pet's breed"
+            android:inputType="textCapWords"
+            android:padding="12dp"
+            android:textSize="16sp"
+            android:visibility="gone"
+            android:layout_marginTop="8dp" />
+
+        <!-- GENDER -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gender"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#152922"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="6dp" />
+
+        <Spinner
+            android:id="@+id/spEditPetGender"
+            android:layout_width="match_parent"
+            android:layout_height="56dp" />
+
+        <!-- DATE OF BIRTH -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Date of Birth"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#152922"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="6dp" />
+
+        <Button
+            android:id="@+id/btnEditPetDob"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Select Date of Birth"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#2F6B52" />
+
+        <TextView
+            android:id="@+id/txtEditPetAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Age will be calculated from date of birth"
+            android:textSize="14sp"
+            android:textColor="#4B5C54"
+            android:layout_marginTop="8dp" />
+
+        <!-- COLOR -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fur / Coat Color"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#152922"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="6dp" />
+
+        <Spinner
+            android:id="@+id/spEditPetColor"
+            android:layout_width="match_parent"
+            android:layout_height="56dp" />
+
+        <EditText
+            android:id="@+id/etEditCustomColor"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="Enter fur / coat color"
+            android:inputType="textCapWords"
+            android:padding="12dp"
+            android:textSize="16sp"
+            android:visibility="gone"
+            android:layout_marginTop="8dp" />
+
+        <!-- WEIGHT -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Weight"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#152922"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="6dp" />
+
+        <EditText
+            android:id="@+id/etEditPetWeight"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="Enter weight in kg"
+            android:inputType="numberDecimal"
+            android:padding="12dp"
+            android:textSize="16sp" />
+
+        <!-- SAVE CHANGES -->
+
+        <Button
+            android:id="@+id/btnUpdatePet"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Save Changes"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:backgroundTint="#2F6B52"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- DELETE PET -->
+
+        <Button
+            android:id="@+id/btnDeletePetProfile"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Delete Pet"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#F2704A"
+            android:background="@drawable/bg_button_outline_danger"
+            android:backgroundTint="@null"
+            android:elevation="0dp"
+            android:layout_marginBottom="16dp" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

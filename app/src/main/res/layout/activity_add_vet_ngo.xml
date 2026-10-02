@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F6F2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/btnAddVetBack"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:gravity="center"
+                android:text="←"
+                android:textSize="18sp"
+                android:textColor="#152922"
+                android:clickable="true"
+                android:focusable="true"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Add Vet / NGO"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#152922"/>
+
+            <View android:layout_width="38dp" android:layout_height="38dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="30dp">
+
+            <Spinner
+                android:id="@+id/spAddType"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@drawable/bg_input_field"
+                android:layout_marginBottom="14dp"/>
+
+            <EditText
+                android:id="@+id/etAddName"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:hint="Name"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:background="@drawable/bg_input_field"
+                android:layout_marginBottom="14dp"/>
+
+            <EditText
+                android:id="@+id/etAddAddress"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:hint="Address (area, Mumbai)"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:background="@drawable/bg_input_field"
+                android:layout_marginBottom="14dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="We'll find the location on the map automatically from this address."
+                android:textSize="11sp"
+                android:textColor="#8A8A8A"
+                android:layout_marginBottom="14dp"/>
+
+            <EditText
+                android:id="@+id/etAddHours"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:hint="Hours (e.g. 9:00 AM – 6:00 PM)"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:background="@drawable/bg_input_field"
+                android:layout_marginBottom="14dp"/>
+
+            <EditText
+                android:id="@+id/etAddPhone"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:hint="Phone number"
+                android:inputType="phone"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:background="@drawable/bg_input_field"
+                android:layout_marginBottom="20dp"/>
+
+            <Button
+                android:id="@+id/btnSubmitVetNgo"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:text="Add to Directory"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:backgroundTint="#2F6B52"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

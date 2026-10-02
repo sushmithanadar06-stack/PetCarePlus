@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_card"
+    android:padding="14dp"
+    android:layout_marginBottom="14dp">
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/pagerListingPhotos"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"/>
+
+    <LinearLayout
+        android:id="@+id/dotsListingPhotos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="8dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/txtListingName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#152922"/>
+
+        <TextView
+            android:id="@+id/txtListingVerified"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="✓ NGO Verified"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:textColor="#2F6B52"
+            android:background="@drawable/bg_chip_purple"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:visibility="gone"
+            android:layout_marginEnd="8dp"/>
+
+        <TextView
+            android:id="@+id/btnListingMenu"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:gravity="center"
+            android:text="⋮"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#8A8A8A"
+            android:visibility="gone"
+            android:clickable="true"
+            android:focusable="true"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtListingDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="#8A8A8A"
+        android:layout_marginTop="2dp"/>
+
+    <TextView
+        android:id="@+id/btnListingAction"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:gravity="center"
+        android:text="I'm Interested"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/bg_button_green_filled"
+        android:layout_marginTop="12dp"
+        android:clickable="true"
+        android:focusable="true"/>
+
+</LinearLayout>

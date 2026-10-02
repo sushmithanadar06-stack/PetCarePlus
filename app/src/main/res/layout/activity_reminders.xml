@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="#F4F6F2">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:gravity="center_vertical" android:padding="20dp">
+        <TextView android:id="@+id/btnRemindersBack" android:layout_width="38dp" android:layout_height="38dp"
+            android:gravity="center" android:text="←" android:textSize="18sp" android:textColor="#152922"
+            android:clickable="true" android:focusable="true"/>
+        <TextView android:id="@+id/txtRemindersTitle" android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:gravity="center" android:text="Reminders"
+            android:textSize="15sp" android:textStyle="bold" android:textColor="#152922"/>
+        <View android:layout_width="38dp" android:layout_height="38dp"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:id="@+id/remindersListContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+
+            <TextView
+                android:id="@+id/txtNoReminders"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="No reminders set yet"
+                android:textSize="13sp"
+                android:textColor="#8A8A8A"
+                android:padding="20dp"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/btnAddReminder"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="+ Add Reminder"
+                android:textSize="13sp" android:textStyle="bold" android:textColor="#2F6B52"
+                android:background="@drawable/bg_button_outline_purple"
+                android:layout_marginTop="4dp"
+                android:clickable="true" android:focusable="true"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

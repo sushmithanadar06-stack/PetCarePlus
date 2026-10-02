@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:background="@drawable/bg_card"
+    android:padding="16dp"
+    android:layout_marginBottom="10dp"
+    android:clickable="true"
+    android:focusable="true">
+
+    <!-- Meta Information Group -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtEntryDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aug 2026"
+            android:textSize="12sp"
+            android:textColor="#8A8A8A"/>
+
+        <TextView
+            android:id="@+id/txtEntryWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4 kg — Perfect weight"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#152922"
+            android:layout_marginTop="2dp"/>
+    </LinearLayout>
+
+    <!-- Highlight Tag Badge Component -->
+    <TextView
+        android:id="@+id/txtEntryTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This month"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:textColor="#2F6B52"
+        android:background="@drawable/bg_chip_purple"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:visibility="gone"/>
+
+</LinearLayout>

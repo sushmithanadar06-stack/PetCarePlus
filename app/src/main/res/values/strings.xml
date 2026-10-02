@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">PetCarePlus</string>
+
+    <!-- Pet Profile -->
+    <string name="add_pet_title">Add Your Pet</string>
+    <string name="add_pet_subtitle">Tell us about your beloved companion</string>
+
+    <string name="pet_name_hint">Pet Name</string>
+    <string name="pet_type">Pet Type</string>
+    <string name="breed">Breed</string>
+    <string name="gender">Gender</string>
+    <string name="date_of_birth">Date of Birth</string>
+    <string name="fur_coat_color">Fur / Coat Color</string>
+    <string name="weight">Weight</string>
+
+    <string name="select_pet_type">Select Pet Type</string>
+    <string name="select_breed">Select Breed</string>
+    <string name="select_gender">Select Gender</string>
+    <string name="select_date_of_birth">Select Date of Birth</string>
+
+    <string name="custom_color_hint">Enter custom color</string>
+    <string name="weight_hint">Enter weight in kg</string>
+
+    <string name="add_pet_photo">Add Pet Photo</string>
+    <string name="change_pet_photo">Change Pet Photo</string>
+    <string name="create_pet_profile">Create Pet Profile</string>
+    <string name="update_pet_profile">Update Pet Profile</string>
+
+    <string name="age_not_selected">Age will be calculated from date of birth</string>
+
+</resources>

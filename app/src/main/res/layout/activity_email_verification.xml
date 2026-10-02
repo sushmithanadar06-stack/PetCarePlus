@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="32dp"
+    android:background="#F4F6F2">
+
+    <ImageView
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@drawable/ic_bell"
+        android:contentDescription="Verify email"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Verify your email"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#152922"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:id="@+id/txtVerifyEmailAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="We've sent a verification link to your email"
+        android:textSize="12sp"
+        android:textColor="#4B5C54"
+        android:gravity="center"
+        android:layout_marginBottom="32dp"/>
+
+    <ProgressBar
+        android:id="@+id/progressVerifyCheck"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginBottom="24dp"
+        android:visibility="visible"/>
+
+    <Button
+        android:id="@+id/btnIveVerified"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="I've verified — Continue"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/bg_button_primary"
+        android:elevation="0dp"
+        android:layout_marginBottom="14dp"/>
+
+    <TextView
+        android:id="@+id/txtResendVerification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resend verification email"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:textColor="#2F6B52"
+        android:padding="8dp"/>
+
+    <TextView
+        android:id="@+id/txtChangeEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wrong email? Sign out and try again"
+        android:textSize="11sp"
+        android:textColor="#9C93AD"
+        android:padding="8dp"
+        android:layout_marginTop="12dp"/>
+
+</LinearLayout>

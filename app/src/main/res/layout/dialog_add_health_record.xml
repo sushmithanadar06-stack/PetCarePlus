@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="vertical" android:padding="24dp">
+
+    <EditText android:id="@+id/etRecordTitle" android:layout_width="match_parent" android:layout_height="48dp"
+        android:hint="Title (e.g. Rabies Booster)" android:paddingStart="14dp" android:paddingEnd="14dp"
+        android:background="@drawable/bg_input_pill" android:layout_marginBottom="12dp"/>
+
+    <EditText android:id="@+id/etRecordSubtitle" android:layout_width="match_parent" android:layout_height="48dp"
+        android:hint="Notes / clinic / frequency (optional)" android:paddingStart="14dp" android:paddingEnd="14dp"
+        android:background="@drawable/bg_input_pill" android:layout_marginBottom="12dp"/>
+
+    <Button android:id="@+id/btnPickDate" android:layout_width="match_parent" android:layout_height="48dp"
+        android:text="Select Date" android:textColor="@android:color/white"
+        android:background="@drawable/bg_button_primary" android:backgroundTint="@null"
+        android:layout_marginBottom="4dp"/>
+</LinearLayout>

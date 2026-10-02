@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- App theme palette -->
+    <color name="app_bg">#F4F6F2</color>
+    <color name="app_ink">#152922</color>
+    <color name="app_ink_soft">#4B5C54</color>
+    <color name="app_primary">#2F6B52</color>
+    <color name="app_primary_deep">#1E4C39</color>
+    <color name="app_accent">#F2704A</color>
+    <color name="app_gold">#E8B24B</color>
+    <color name="app_surface">#FFFFFF</color>
+    <color name="app_line">#DEE5DD</color>
+
+    <!-- App launcher icon background -->
+    <color name="ic_launcher_background">#FCFAF4</color>
+</resources>

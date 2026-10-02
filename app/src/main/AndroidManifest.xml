@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+
+    <!-- Camera is optional -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <application
+        android:name=".PetCareApp"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PetCarePlus">
+
+        <!-- ====================================================== -->
+        <!-- FileProvider -->
+        <!-- ====================================================== -->
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+
+        </provider>
+
+
+        <!-- ====================================================== -->
+        <!-- uCrop -->
+        <!-- ====================================================== -->
+
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+
+        <!-- ====================================================== -->
+        <!-- Module 2 - Pet Management -->
+        <!-- ====================================================== -->
+
+        <!-- Add Pet -->
+        <activity
+            android:name=".activities.AddPetActivity"
+            android:exported="false" />
+
+        <!-- Edit Pet -->
+        <activity
+            android:name=".activities.EditPetActivity"
+            android:exported="false" />
+
+        <!-- Pet List -->
+        <activity
+            android:name=".activities.PetListActivity"
+            android:exported="false" />
+
+        <!-- View Pet -->
+        <activity
+            android:name=".activities.ViewPetActivity"
+            android:exported="false" />
+
+        <!-- Pet Menu -->
+        <activity
+            android:name=".activities.PetMenuActivity"
+            android:exported="false" />
+
+        <!-- Switch Profile -->
+        <activity
+            android:name=".activities.SwitchProfileActivity"
+            android:exported="false" />
+
+
+        <!-- ====================================================== -->
+        <!-- App Entry / User Management -->
+        <!-- ====================================================== -->
+
+        <!-- Login -->
+        <activity
+            android:name=".activities.LoginActivity"
+            android:exported="false" />
+
+        <!-- Splash - App Entry Point -->
+        <activity
+            android:name=".activities.SplashActivity"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <!-- Onboarding -->
+        <activity
+            android:name=".activities.OnboardingActivity"
+            android:exported="false" />
+
+        <!-- Signup -->
+        <activity
+            android:name=".activities.SignupActivity"
+            android:exported="false" />
+
+        <!-- Profile -->
+        <activity
+            android:name=".activities.ProfileActivity"
+            android:exported="false" />
+
+        <!-- Settings -->
+        <activity
+            android:name=".activities.SettingsActivity"
+            android:exported="false" />
+
+        <!-- Main Activity -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+
+        <!-- ====================================================== -->
+        <!-- Module 3 - PetCare+ Dashboard & Services -->
+        <!-- ====================================================== -->
+
+        <!-- Weather -->
+        <activity
+            android:name=".activities.WeatherCareActivity"
+            android:exported="false" />
+
+        <!-- Wellness -->
+        <activity
+            android:name=".activities.WellnessActivity"
+            android:exported="false" />
+
+        <!-- Weight Timeline -->
+        <activity
+            android:name=".activities.WeightTimelineActivity"
+            android:exported="false" />
+
+        <!-- Daily Care -->
+        <activity
+            android:name=".activities.DailyCareActivity"
+            android:exported="false" />
+
+        <!-- Mood Journal -->
+        <activity
+            android:name=".activities.MoodJournalActivity"
+            android:exported="false" />
+
+        <!-- Wellness Analytics -->
+        <activity
+            android:name=".activities.WellnessAnalyticsActivity"
+            android:exported="false" />
+
+
+        <!-- ====================================================== -->
+        <!-- Digital Health Records -->
+        <!-- ====================================================== -->
+
+        <!-- Medical Records Hub -->
+        <activity
+            android:name=".activities.MedicalRecordsHubActivity"
+            android:exported="false" />
+
+        <!-- Health Record List -->
+        <activity
+            android:name=".activities.HealthRecordListActivity"
+            android:exported="false" />
+
+        <!-- Documents -->
+        <activity
+            android:name=".activities.DocumentsActivity"
+            android:exported="false" />
+
+        <!-- Location Detail -->
+        <activity
+            android:name=".activities.LocationDetailActivity"
+            android:exported="false" />
+
+
+        <!-- ====================================================== -->
+        <!-- Account / Settings -->
+        <!-- ====================================================== -->
+
+        <!-- Email Verification -->
+        <activity
+            android:name=".activities.EmailVerificationActivity"
+            android:exported="false" />
+
+        <!-- Notification Preferences -->
+        <activity
+            android:name=".activities.NotificationPreferencesActivity"
+            android:exported="false" />
+
+        <!-- Privacy & Security -->
+        <activity
+            android:name=".activities.PrivacySecurityActivity"
+            android:exported="false" />
+
+        <!-- Policy Viewer -->
+        <activity
+            android:name=".activities.PolicyViewerActivity"
+            android:exported="false" />
+
+        <!-- Language -->
+        <activity
+            android:name=".activities.LanguageActivity"
+            android:exported="false" />
+
+
+        <!-- ====================================================== -->
+        <!-- Pet-Care Reminders -->
+        <!-- ====================================================== -->
+
+        <activity
+            android:name=".activities.RemindersActivity"
+            android:exported="false" />
+
+        <!-- Reminder Receiver -->
+        <receiver
+            android:name=".receivers.ReminderReceiver"
+            android:exported="false" />
+
+        <!-- Boot Receiver -->
+        <receiver
+            android:name=".receivers.BootReceiver"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+
+        </receiver>
+
+
+        <!-- ====================================================== -->
+        <!-- Food Safety Checker -->
+        <!-- ====================================================== -->
+
+        <activity
+            android:name=".activities.FoodSafetyActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activities.FoodResultActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activities.NutritionGuideActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activities.PetSnacksActivity"
+            android:exported="false" />
+
+
+        <!-- ====================================================== -->
+        <!-- Community -->
+        <!-- ====================================================== -->
+
+        <!-- Community Rooms -->
+        <activity
+            android:name=".activities.CommunityRoomsActivity"
+            android:exported="false" />
+
+        <!-- Chat Room -->
+        <activity
+            android:name=".activities.ChatRoomActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+
+        <!-- ====================================================== -->
+        <!-- Adoption -->
+        <!-- ====================================================== -->
+
+        <!-- Adoption Listings -->
+        <activity
+            android:name=".activities.AdoptionListingsActivity"
+            android:exported="false" />
+
+        <!-- Post Adoption -->
+        <activity
+            android:name=".activities.PostAdoptionActivity"
+            android:exported="false" />
+
+        <!-- Adoption Requests -->
+        <activity
+            android:name=".activities.AdoptionRequestsActivity"
+            android:exported="false" />
+
+        <!-- Adoption Chat -->
+        <activity
+            android:name=".activities.AdoptionChatActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Adoption Messages -->
+        <activity
+            android:name=".activities.AdoptionMessagesActivity"
+            android:exported="false" />
+
+        <!-- Adoption All Requests -->
+        <activity
+            android:name=".activities.AdoptionAllRequestsActivity"
+            android:exported="false" />
+
+        <!-- All Adoption Requests -->
+        <activity
+            android:name=".activities.AllAdoptionRequestsActivity"
+            android:exported="false" />
+
+
+        <!-- ====================================================== -->
+        <!-- Adoption Photos / Profiles -->
+        <!-- ====================================================== -->
+
+        <activity
+            android:name=".activities.PhotoViewerActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activities.OtherUserProfileActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activities.FullscreenPhotoActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+
+
+        <!-- ====================================================== -->
+        <!-- Rescue Connect -->
+        <!-- ====================================================== -->
+
+        <activity
+            android:name=".activities.RescueConnectActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activities.ReportRescueActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".activities.RescueDetailActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activities.RescueStatusActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activities.RescuePhotoViewerActivity"
+            android:exported="false" />
+
+
+        <!-- ====================================================== -->
+        <!-- Notifications -->
+        <!-- ====================================================== -->
+
+        <activity
+            android:name=".activities.NotificationsActivity"
+            android:exported="false" />
+
+
+        <!-- ====================================================== -->
+        <!-- Veterinary / NGO Locator -->
+        <!-- ====================================================== -->
+
+        <activity
+            android:name=".activities.VetNgoLocatorActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activities.AddVetNgoActivity"
+            android:exported="false" />
+
+
+        <!-- ====================================================== -->
+        <!-- Health Report -->
+        <!-- ====================================================== -->
+
+        <activity
+            android:name=".activities.HealthReportActivity"
+            android:exported="false" />
+
+
+    </application>
+
+</manifest>
